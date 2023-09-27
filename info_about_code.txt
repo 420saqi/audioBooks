@@ -1,0 +1,26 @@
+
+
+                         /////// screens ////////
+1. main_audio_book_screen.dart
+
+    it is the main screen as the user open the app, it will show all the list
+    of categories including the title "Audio Books"
+
+2. play_audio_item_screen.dart
+
+    it is the screen that will open if a user click on the item in the category
+
+                        ///// Widgets/////////
+3. category_item.dart
+
+   it is the widget that renders the full category Item like motivation including its title and
+   the audio Items on which user click to go to play_audio_item_screen
+
+4. audio_item.dart
+
+    it contains a single audio ITems , a title, duration and image
+
+5. audio_slider.dart
+
+    it is the widet that shows the slider of the audio playing in the
+    play_audio_item_screen

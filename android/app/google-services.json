@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "443537329159",
+    "project_id": "study-app-703cd",
+    "storage_bucket": "study-app-703cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:443537329159:android:3275659dd6dab7c2e4aea2",
+        "android_client_info": {
+          "package_name": "com.example.tutorial_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEdvf6KNU1sJ6dtzvYRrDoDfnu0PWHDcA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

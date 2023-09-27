@@ -1,0 +1,28 @@
+{
+  "motivation": [
+    {
+      "id": "1",
+      "title": "Stay Focused",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/study-app-703cd.appspot.com/o/motivation_category%2Fimages%2Ffocused.jpeg?alt=media&token=6c86a381-4d29-4f2e-8807-d52cbe29d0bb",
+      "audioSource": "https://firebasestorage.googleapis.com/v0/b/study-app-703cd.appspot.com/o/motivation_category%2Faudios%2Fstay-focused.mp3?alt=media&token=ab5e5003-2bc8-4f3d-a703-31065762f9c6"
+    },
+    {
+      "id": "2",
+      "title": "Keep Grinding",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/study-app-703cd.appspot.com/o/motivation_category%2Fimages%2Fgrinding.jpg?alt=media&token=9cfb8f88-a3bd-4b53-b505-3544e6d77d91",
+      "audioSource": "https://firebasestorage.googleapis.com/v0/b/study-app-703cd.appspot.com/o/motivation_category%2Faudios%2Fkeep-grinding.mp3?alt=media&token=7c7c7242-c81e-4f63-8db8-51362a374739"
+    },
+    {
+      "id": "3",
+      "title": "Change Mindset",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/study-app-703cd.appspot.com/o/motivation_category%2Fimages%2Fmindset.jpg?alt=media&token=2188a00d-1bbb-4a4a-9af8-9474c63f153d",
+      "audioSource": "https://firebasestorage.googleapis.com/v0/b/study-app-703cd.appspot.com/o/motivation_category%2Faudios%2Fchange-mindset.mp3?alt=media&token=d65970f4-4946-4c7c-ac8a-89502922910b"
+    },
+    {
+      "id": "4",
+      "title": "Discipline is the Key",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/study-app-703cd.appspot.com/o/motivation_category%2Fimages%2Fdiscipline.jpeg?alt=media&token=60392239-9658-4ce3-9fce-31bbee406280",
+      "audioSource": "https://firebasestorage.googleapis.com/v0/b/study-app-703cd.appspot.com/o/motivation_category%2Faudios%2Fdiscipline.mp3?alt=media&token=0ac19780-62b9-4534-963e-78d61946944c"
+    }
+  ]
+}

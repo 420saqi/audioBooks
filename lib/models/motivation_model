@@ -1,0 +1,47 @@
+class MotivationModelClass {
+  List<Motivation>? motivation;
+
+  MotivationModelClass({this.motivation});
+
+  MotivationModelClass.fromJson(Map<String, dynamic> json) {
+    if (json['motivation'] != null) {
+      motivation = <Motivation>[];
+      json['motivation'].forEach((v) {
+        motivation!.add(new Motivation.fromJson(v));
+      });
+    }
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    if (this.motivation != null) {
+      data['motivation'] = this.motivation!.map((v) => v.toJson()).toList();
+    }
+    return data;
+  }
+}
+
+class Motivation {
+  String? id;
+  String? title;
+  String? imageUrl;
+  String? audioSource;
+
+  Motivation({this.id, this.title, this.imageUrl, this.audioSource});
+
+  Motivation.fromJson(Map<String, dynamic> json) {
+    id = json['id'];
+    title = json['title'];
+    imageUrl = json['imageUrl'];
+    audioSource = json['audioSource'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['id'] = this.id;
+    data['title'] = this.title;
+    data['imageUrl'] = this.imageUrl;
+    data['audioSource'] = this.audioSource;
+    return data;
+  }
+}
