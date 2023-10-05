@@ -1,5 +1,7 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_database/firebase_database.dart';
+import 'package:tutorial_app/constants/colors.dart';
 import 'package:tutorial_app/screens/main_audio_book_screen.dart';
 
 Future<void> main() async {
@@ -12,6 +14,7 @@ Future<void> main() async {
     messagingSenderId: '443537329159',
     projectId: 'study-app-703cd',
   ));
+  FirebaseDatabase.instance.setPersistenceEnabled(true);
   runApp(const MyApp());
 }
 
@@ -21,10 +24,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    print('main is called');
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: pinkColor),
         useMaterial3: true,
       ),
       home: const MainAudioBookScreen(),
