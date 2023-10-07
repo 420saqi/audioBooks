@@ -32,7 +32,7 @@ class CategoryItem extends StatelessWidget {
           children: [
             Expanded(
               child: SizedBox(
-                height: size.height * 0.29,
+                height: size.height * 0.30,
                 width: double.infinity,
                 child: Card(
                   elevation: 5,

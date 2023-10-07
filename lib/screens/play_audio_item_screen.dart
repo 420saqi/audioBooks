@@ -32,7 +32,7 @@ class _PlayAudioItemScreenState extends State<PlayAudioItemScreen> {
   @override
   void initState() {
     Future.delayed(
-      const Duration(seconds: 3),
+      const Duration(milliseconds: 1500),
       () {
         setState(() {
           isShimmer = false;
@@ -42,26 +42,32 @@ class _PlayAudioItemScreenState extends State<PlayAudioItemScreen> {
     _audioPlayer.setSourceUrl(widget.audioSource);
 
     _audioPlayer.onPositionChanged.listen((Duration p) {
-      setState(() {
-        audioCurrentPosition = p;
-      });
+      if (mounted) {
+        setState(() {
+          audioCurrentPosition = p;
+        });
+      }
     });
     _audioPlayer.onDurationChanged.listen((Duration d) {
-      setState(() {
-        audioTotalDuration = d;
-        print(
-            'The total duration of the audio is ::: ${audioTotalDuration.inSeconds}');
+      if (mounted) {
+        setState(() {
+          audioTotalDuration = d;
+          print(
+              'The total duration of the audio is ::: ${audioTotalDuration.inSeconds}');
 
-        durationPlusOne = audioTotalDuration + const Duration(seconds: 1);
-        print('Max Duration Value is :: ${durationPlusOne.inSeconds}');
-        // durationPlusOne = (d + const Duration(seconds: 1));
-      });
+          durationPlusOne = audioTotalDuration + const Duration(seconds: 1);
+          print('Max Duration Value is :: ${durationPlusOne.inSeconds}');
+          // durationPlusOne = (d + const Duration(seconds: 1));
+        });
+      }
     });
     _audioPlayer.onPlayerComplete.listen((event) {
-      setState(() {
-        _isPlaying = false;
-        audioCurrentPosition = const Duration(seconds: 0);
-      });
+      if (mounted) {
+        setState(() {
+          _isPlaying = false;
+          audioCurrentPosition = const Duration(seconds: 0);
+        });
+      }
     });
 
     super.initState();
@@ -74,16 +80,20 @@ class _PlayAudioItemScreenState extends State<PlayAudioItemScreen> {
 
   void playPause() {
     try {
-      if (_audioPlayer.state == PlayerState.playing) {
-        _isPlaying = false;
-
+      if (_isPlaying) {
         _audioPlayer.pause();
+        _isPlaying = false;
+        setState(() {});
+        print('the value of is playing when pause : $_isPlaying');
         print('pause function executed');
       } else {
         _isPlaying = true;
+
+        print('the value of is playing when play : $_isPlaying');
         print('The player state is :: ${_audioPlayer.state}');
         print('Now Playing the song');
         _audioPlayer.play(UrlSource(widget.audioSource));
+        setState(() {});
       }
     } catch (e) {
       print('Error occured in play_audio_item_screen :: : $e');
@@ -134,13 +144,16 @@ class _PlayAudioItemScreenState extends State<PlayAudioItemScreen> {
                           audioTotalDuration.inSeconds.toDouble(),
                         ),
                     onChanged: (value) {
-                      setState(() {
-                        changedToDuration(value.toInt());
-                        audioCurrentPosition = Duration(seconds: value.toInt());
-                        // above line update the position of slider
-                        // once the audio is completed and then if i seek
-                        // the slider forward without playing it
-                      });
+                      if (mounted) {
+                        setState(() {
+                          changedToDuration(value.toInt());
+                          audioCurrentPosition =
+                              Duration(seconds: value.toInt());
+                          // above line update the position of slider
+                          // once the audio is completed and then if i seek
+                          // the slider forward without playing it
+                        });
+                      }
                     },
                   ),
                   Padding(
