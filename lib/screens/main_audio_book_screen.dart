@@ -55,7 +55,7 @@ class _MainAudioBookScreenState extends State<MainAudioBookScreen> {
           text: TextSpan(
             children: [
               TextSpan(
-                text: 'A',
+                text: 'Aaaaaaa',
                 style: TextStyle(
                   color: pinkColor,
                   fontWeight: FontWeight.bold,
